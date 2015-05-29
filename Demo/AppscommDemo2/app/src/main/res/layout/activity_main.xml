@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.appscommndemo.MainActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="185dp" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="0dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:id="@+id/relativeLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  1. 请选择对应设备的通讯协议"
+                    android:id="@+id/textView"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentStart="true" />
+
+
+            </RelativeLayout>
+
+            <Spinner
+                android:layout_width="120dp"
+                android:layout_height="25dp"
+                android:id="@+id/spList"
+                android:focusableInTouchMode="false"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="26dp"
+                android:spinnerMode="dropdown"
+                android:clickable="true"
+                android:focusable="false"
+                android:background="#f953b783"
+                android:layout_below="@+id/relativeLayout"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  2. 扫描蓝牙设备"
+                android:id="@+id/textView2"
+                android:layout_below="@+id/spList"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="5dp" />
+
+            <Button
+                android:id="@+id/btn_scan"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="5dp"
+                android:text="扫描"
+                android:textSize="12sp"
+                android:layout_below="@+id/textView2"
+                android:layout_alignStart="@+id/spList" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MAC地址:"
+                android:layout_marginLeft="0dp"
+                android:layout_alignTop="@+id/btn_scan"
+                android:layout_toEndOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/tv_addr"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_alignTop="@+id/textView1"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@+id/textView1" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设备名称:"
+                android:layout_marginLeft="0dp"
+                android:layout_below="@+id/textView1"
+                android:layout_alignStart="@+id/textView1"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/tvDevName"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_alignTop="@+id/textView3"
+                android:layout_alignStart="@+id/tv_addr" />
+
+            <Button
+                android:id="@+id/btn_test"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="0dp"
+                android:text="测试"
+                android:textSize="12sp"
+                android:layout_below="@+id/textView4"
+                android:layout_alignStart="@+id/btn_scan" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  3. 运行测试"
+                android:id="@+id/textView4"
+                android:layout_below="@+id/btn_scan"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+        </LinearLayout>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ScrollView
+                android:id="@+id/scrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:scrollbarAlwaysDrawVerticalTrack="true" >
+
+                <TextView
+                    android:id="@+id/tv_log"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+
+            </ScrollView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
